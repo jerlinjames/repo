@@ -16,7 +16,7 @@
 </header>
 
 <div id="main-content">
-@if (@User.Identity.IsAuthenticated)s
+@if (@User.Identity.IsAuthenticated)
 {
     <p class="error" data-bind="text: error"></p>
     <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
