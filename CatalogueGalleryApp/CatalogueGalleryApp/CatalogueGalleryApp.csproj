@@ -226,10 +226,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\Controllers\AddNewController.js" />
+    <Content Include="app\Controllers\CategoriesController.js" />
     <Content Include="app\Controllers\DashboardController.js" />
     <Content Include="app\Controllers\HomeController.js" />
     <Content Include="app\Factories\authFact.js" />
     <Content Include="app\routes.js" />
+    <Content Include="app\Views\Add\addNew.html" />
+    <Content Include="app\Views\Categories\categories.html" />
     <Content Include="app\Views\dashboard.html" />
     <Content Include="Index.html" />
     <Content Include="app\Views\login.html" />
@@ -305,6 +309,7 @@
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="App_Code\GlyphIcon.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

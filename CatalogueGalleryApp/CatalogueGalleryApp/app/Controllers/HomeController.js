@@ -1,5 +1,5 @@
 ﻿myApp.controller('HomeController', ['$scope', 'authFact', '$location', '$cookies', function ($scope, authfact, $location, $cookies) {
-    $scope.name = 'Login Please';
+    $scope.name = 'Login with your Facebook account';
 
     $scope.FBLogin = function () {
         FB.login(function (response) {
@@ -22,7 +22,7 @@
 
                     authfact.setAccessToken(accesstoken);
 
-                    $location.path('/dashboard');
+                    $location.path('/addNew');
                     $scope.$apply();
                 });
             } else {

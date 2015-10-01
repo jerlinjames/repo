@@ -9,6 +9,16 @@
              controller: 'DashboardController',
              authenticated: true
          })
+         .when('/addNew', {
+             templateUrl: 'app/Views/Add/addNew.html',
+             controller: 'DashboardController',
+             authenticated: true
+         })
+        .when('/categories', {
+            templateUrl: 'app/Views/Categories/categories.html',
+            controller: 'CategoriesController',
+            authenticated: true
+        })
         .otherwise('/', {
             templateUrl: 'app/Views/home.html',
             controller: 'HomeController'

@@ -1,4 +1,13 @@
-﻿<h2>Welcome to dashboard </h2>
-{{name}}
+﻿<div ng-controller ="DashboardController">
+    <div class="row">
+        <div class="text-center"><h2>Dashboard</h2></div>
+    </div>
+
+    <ul class="nav nav-tabs">
+        <li role="presentation" ng-class="{'active' : addNew}"><a href="#/addNew">Add New</a></li>
+        <li role="presentation" ng-class="{'active' : categories}"><a href="#/categories">Categories</a></li>
+    </ul>
+</div>
+
 
 
