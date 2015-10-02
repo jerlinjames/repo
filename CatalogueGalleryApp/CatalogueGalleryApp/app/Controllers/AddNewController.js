@@ -1,4 +1,4 @@
-﻿myApp.controller('AddNewController', ['$scope', function ($scope) {
+﻿myApp.controller('addNewController', ['$scope', function ($scope) {
     $scope.stuff = "Add Stuff here!!";
 
 

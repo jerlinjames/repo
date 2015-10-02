@@ -1,10 +1,9 @@
-﻿myApp.controller('DashboardController', ['$scope', 'authFact', '$location', function ($scope, authfact, $location) {
+﻿myApp.controller('dashboardController', ['$scope', 'authFact', '$location', function ($scope, authfact, $location) {
     var userObj = JSON.parse(authfact.getUserObject());
 
     $scope.name = userObj.name;
-    
-
-    // get which tab is active
+    $scope.pic = userObj.picture.data.url;
+// get which tab is active
     $scope.$watch(function () { return $location.path(); }, function (val) {
 
         switch (val) {

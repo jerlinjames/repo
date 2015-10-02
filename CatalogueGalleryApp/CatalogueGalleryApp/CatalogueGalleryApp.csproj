@@ -212,26 +212,39 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\MeViewModels.cs" />
+    <Compile Include="Helpers\ConnectionSettings.cs" />
+    <Compile Include="Helpers\DapperHelperExtensions.cs" />
+    <Compile Include="Interfaces\IItemsRepository.cs" />
+    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="Models\UnwantedModels\AccountViewModels.cs" />
+    <Compile Include="Models\ItemModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\UnwantedModels\IdentityModels.cs" />
+    <Compile Include="Models\UnwantedModels\ManageViewModels.cs" />
+    <Compile Include="Models\UnwantedModels\MeViewModels.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Repositories\ItemsRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\Controllers\AddNewController.js" />
-    <Content Include="app\Controllers\CategoriesController.js" />
-    <Content Include="app\Controllers\DashboardController.js" />
-    <Content Include="app\Controllers\HomeController.js" />
+    <Content Include="app\Controllers\addNewController.js" />
+    <Content Include="app\Controllers\categoriesController.js" />
+    <Content Include="app\Controllers\dashboardController.js" />
+    <Content Include="app\Controllers\homeController.js" />
     <Content Include="app\Factories\authFact.js" />
     <Content Include="app\routes.js" />
+    <Content Include="app\Factories\apiService.js" />
+    <Content Include="app\Factories\userService.js" />
     <Content Include="app\Views\Add\addNew.html" />
     <Content Include="app\Views\Categories\categories.html" />
     <Content Include="app\Views\dashboard.html" />
@@ -1116,6 +1129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\Models\" />
+    <Folder Include="app\Services\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

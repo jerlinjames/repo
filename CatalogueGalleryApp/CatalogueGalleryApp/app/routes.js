@@ -2,26 +2,26 @@
     $routeProvider
         .when('/', {
             templateUrl: 'app/Views/login.html',
-            controller: 'HomeController'
+            controller: 'homeController'
         })
          .when('/dashboard', {
              templateUrl: 'app/Views/dashboard.html',
-             controller: 'DashboardController',
+             controller: 'dashboardController',
              authenticated: true
          })
          .when('/addNew', {
              templateUrl: 'app/Views/Add/addNew.html',
-             controller: 'DashboardController',
+             controller: 'addNewController',
              authenticated: true
          })
         .when('/categories', {
             templateUrl: 'app/Views/Categories/categories.html',
-            controller: 'CategoriesController',
+            controller: 'categoriesController',
             authenticated: true
         })
         .otherwise('/', {
             templateUrl: 'app/Views/home.html',
-            controller: 'HomeController'
+            controller: 'homeController'
         });
 }]);
 

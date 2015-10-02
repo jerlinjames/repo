@@ -1,12 +1,15 @@
-﻿<div ng-controller ="DashboardController">
-    <div class="row">
+﻿<div ng-controller ="dashboardController">
+    <div class="row"> 
+        <img src="{{pic}}" alt="" />
         <div class="text-center"><h2>Dashboard</h2></div>
-    </div>
 
-    <ul class="nav nav-tabs">
-        <li role="presentation" ng-class="{'active' : addNew}"><a href="#/addNew">Add New</a></li>
-        <li role="presentation" ng-class="{'active' : categories}"><a href="#/categories">Categories</a></li>
-    </ul>
+
+        <ul class="nav nav-tabs">
+            <li role="presentation" ng-class="{'active' : addNew}"><a href="#/addNew">Add New</a></li>
+            <li role="presentation" ng-class="{'active' : categories}"><a href="#/categories">Categories</a></li>
+        </ul>
+    </div>
+    
 </div>
 
 
