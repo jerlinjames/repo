@@ -27,7 +27,7 @@ namespace CatalogueGalleryApp.Controllers
         //}
 
         [HttpGet]
-        public IHttpActionResult CheckIfUserExists(int? fbId)
+        public IHttpActionResult CheckIfUserExists(string fbId)
         {
             var items = _UserRepository.CheckIfUserExists(fbId);
             return Ok(items);

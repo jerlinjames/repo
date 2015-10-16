@@ -3,67 +3,83 @@
 </div>
 
 
-<div class="container" ng-controller="addNewController">
+
+
+
+
+
+
+<div class="container" ng-controller="addNewController" ng-init="init()">
     <br /><br />
-    <div class="row">
+    
+   
         
-        <form>
-            <div class="form-group">
-                <label for="fileInput">File input</label>
-                <input type="file" id="fileInput">
-                <p class="help-block">Example block-level help text here.</p>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create New Album</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label class="" for="newAlbumName">Album Name</label>
+                                <input class="form-control" type="text" id="newAlbumName" value="newAlbumName" ng-model="newAlbumName" />
+                            </div>
+                            <div class="form-group">
+                                <label class="" for="newAlbumDescription">Album Desciption</label>
+                                <input class="form-control" type="text" id="newAlbumDescription" value="newAlbumDescription" ng-model="newAlbumDescription" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" ng-click="createNewAlbum();" data-dismiss="modal">Create</button>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="itemName">Name: </label>
-                <input type="text" class="form-control" id="itemName" placeholder="Enter Name here..">
-            </div>
-            <div class="form-group">
-                <label for="sel1">Select list:</label>
-                <select class="form-control" id="sel1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="descriptionArea">Description: </label>
-                <textarea class="form-control" rows="3"></textarea>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Check me out
-                </label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-            
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<div class="btn btn-lg btn-default">Select</div>
-        <div class="form-group">
-            <span class="input-group-addon" >Name</span>
-            <input type="text" class="form-control" placeholder="Enter name here..">
         </div>
-            <label for="sel1">Select list:</label>
-            <select class="form-control" id="sel1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-            </select>-->
+        
+
+        
+        
+
+    <div class="container">
+            <form ng-submit="upload();">
+                <div class="form-group">
+                    <label for="sel1">Select Album</label>
+                    <!-- Dropdown list only lists albums that has can_upload field set to true-->
+                    <select class="form-control" id="sel1" ng-options="o.name for o in allAlbums | filter: {can_upload: true}" ng-model="selectedAlbum"></select>
+                </div>
+                <div class="form-group">
+                    <label class="" for="caption">Description</label>
+                    <input class="form-control" type="text" id="caption" value="caption" ng-model="caption" />
+                </div>
+
+
+
+
+
+                <div class="form-group">
+                    <span class="btn btn-default btn-file">
+                        Browse <input type="file" id="file" ng-model="file">
+                    </span>
+                    <!--<input type="file" class="btn btn-lg btn-success" name="file" id="file" />-->
+                    <button type="submit" class="btn  btn-success">Upload photo</button>
+                </div>
+
+
+            </form>
+        </div>
+        
+        
+        
+        
+
+</div>

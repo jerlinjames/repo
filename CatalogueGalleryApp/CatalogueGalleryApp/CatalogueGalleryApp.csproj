@@ -246,6 +246,7 @@
     <Content Include="app\Factories\apiService.js" />
     <Content Include="app\Factories\userService.js" />
     <Content Include="app\Views\Add\addNew.html" />
+    <Content Include="app\Views\Add\createNewAlbum.html" />
     <Content Include="app\Views\Categories\categories.html" />
     <Content Include="app\Views\dashboard.html" />
     <Content Include="Index.html" />
@@ -299,6 +300,7 @@
     <Content Include="Scripts\angular-messages.js" />
     <Content Include="Scripts\angular-messages.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-modal-service.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.js" />
@@ -326,6 +328,8 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\hello.js" />
+    <Content Include="Scripts\hello_Facebook.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -1081,6 +1085,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\sammy-0.7.4.js" />
     <Content Include="Scripts\sammy-0.7.4.min.js" />
+    <Content Include="Scripts\ui-bootstrap-tpls-0.14.2.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Scripts\app\_run.js" />
     <Content Include="Scripts\app\app.datamodel.js" />

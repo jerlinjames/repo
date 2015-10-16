@@ -9,7 +9,7 @@ namespace CatalogueGalleryApp.Interfaces
 {
     public interface IUserRepository
     {
-        bool CheckIfUserExists(int? fbId);
+        bool CheckIfUserExists(string fbId);
         bool AddNewUser(UserModel user); 
         
     }

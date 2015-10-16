@@ -1,5 +1,5 @@
 ﻿myApp.factory('userService', ['$http', 'apiService', function ($http, api) {
-
+    
     var apiUrl = api.url;
 
     var userService = {};
@@ -9,7 +9,7 @@
                 url: apiUrl + "user/CheckIfUserExists?fbId=" + fbId,
                 method: "GET",
                 cache: false,
-            }).then(function(response) {
+            }).success(function(response) {
                 return response.data;
             });
         };

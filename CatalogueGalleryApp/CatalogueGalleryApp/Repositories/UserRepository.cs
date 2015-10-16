@@ -11,7 +11,7 @@ namespace CatalogueGalleryApp.Repositories
 {
     public class UserRepository: IUserRepository
     {
-        public bool CheckIfUserExists(int? fbId)
+        public bool CheckIfUserExists(string fbId)
         {
             using (var conn = ConnectionSettings.GetSqlConnection())
             {
@@ -33,10 +33,7 @@ INSERT INTO [dbo].[Users]
            ,[FbName]
            ,[FbEmail]
            ,[FbDateOfBirth]
-           ,[FbGender]
-           ,[UserFirstLoggedInDate]
-           ,[UserLastLoginDate]
-           ,[UserDisplayName])
+           ,[FbGender])
      VALUES
             (@FbId,
             @FbFirstName,
@@ -44,12 +41,8 @@ INSERT INTO [dbo].[Users]
             @FbName,
             @FbEmail,
             @FbDateOfBirth,
-            @FbGender,
-            @UserFirstLoggedInDate,
-            @UserLastLoginDate,
-            @UserDisplayName)
-";
-                var userExists = conn.Query(sql, new { user }).Single();
+            @FbGender)";
+                var userExists = conn.Query<int>(sql, user).SingleOrDefault();
                 return userExists > 0;
             }
             

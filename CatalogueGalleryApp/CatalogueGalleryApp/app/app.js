@@ -1,4 +1,4 @@
-﻿var myApp = angular.module('myApp', ['ngRoute', 'ngCookies']);
+﻿var myApp = angular.module('myApp', ['ngRoute', 'ngCookies', 'ui.bootstrap', 'angularModalService']);
 
 window.fbAsyncInit = function () {
     FB.init({
@@ -17,7 +17,8 @@ window.fbAsyncInit = function () {
 }(document, 'script', 'facebook-jssdk'));
 
 
+myApp.controller('ModalController', function ($scope, close) {
 
-//myApp.constant('CatalogueGallerySettings', {
-//    apiUri: 'http://localhost:20324/api/'
-//})
+    // when you need to close the modal, call close
+    close("Success!");
+});
